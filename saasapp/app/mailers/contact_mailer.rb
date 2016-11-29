@@ -2,9 +2,9 @@ class ContactMailer < ActionMailer::Base
   default to: 'ocastro24@yahoo.com'  
   
   def contact_email(name, email, body)
-    @name = name
+    @name  = name
     @email = email
-    @body = body
+    @body  = body
     
     mail(from: email, subject: 'Contact Form Message')
   end
