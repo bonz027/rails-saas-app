@@ -22,7 +22,7 @@ class ProfilesController < ApplicationController
 # Whitelist form fields for added security  
   private 
     def profile_params
-     params.require(:profile).permit(:first_name, :last_name, 
+     params.require(:profile).permit(:first_name, :last_name, :avatar, 
      :job_title, :phone_number, :contact_email, :description)
     end
   end  
