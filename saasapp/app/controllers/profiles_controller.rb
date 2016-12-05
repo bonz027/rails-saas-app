@@ -19,6 +19,13 @@ class ProfilesController < ApplicationController
      render action: :new
     end
   end
+
+# GET to /users/:user_id/profile/edit
+  def edit
+    @user    = User.find( params[:user_id] )
+    @profile = @user.profile
+  end
+  
 # Whitelist form fields for added security  
   private 
     def profile_params
